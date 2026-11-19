@@ -1,8 +1,8 @@
 # The Daily Meridian — The World on Thursday, 19 November 2026
 
 [![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
-[![make.fun rank](https://make.fun/badge/bavks/news-image-20261119-entry/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
-[![make.fun reward](https://make.fun/badge/bavks/news-image-20261119-entry/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![make.fun rank](https://make.fun/badge/news-image-20261119/bavks/news-image-20261119-entry/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![make.fun reward](https://make.fun/badge/news-image-20261119/bavks/news-image-20261119-entry/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 
 A make.fun entry for the **news-image-20261119** bounty: sum up 19 November's
 world news in one image.
