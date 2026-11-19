@@ -1,30 +1,35 @@
 #!/usr/bin/env python3
-"""make.fun entry: "Sum up 19 November's world news in one image".
+"""Entry point for the make.fun news-image-20261119 entry.
 
-The repository commits the finished front page as entry.png (drawn and
-typeset by render_image.py).  This program's whole job is to deliver
-those exact bytes to the grader: it copies entry.png into the output
-directory -- $MAKEFUN_OUTPUT_DIR when set, otherwise /output -- using
-only the standard library, with no network, so every run produces a
-byte-identical file.
+Copies the held front-page image (entry.png, rendered by render_image.py)
+into the output directory, byte for byte. Standard library only, no
+network access, no work done at run time beyond the copy — so repeated
+runs always produce identical output.
+
+The output directory defaults to /output and can be overridden with the
+MAKEFUN_OUTPUT_DIR environment variable.
 """
 
 import os
 import shutil
+import sys
 from pathlib import Path
 
 
-def output_dir() -> Path:
-    return Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
+def main() -> int:
+    here = Path(__file__).resolve().parent
+    source = here / "entry.png"
+    if not source.is_file():
+        print(f"error: {source} is missing", file=sys.stderr)
+        return 1
 
-
-def main() -> None:
-    source = Path(__file__).resolve().parent / "entry.png"
-    target = output_dir() / "entry.png"
-    target.parent.mkdir(parents=True, exist_ok=True)
+    out_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
+    out_dir.mkdir(parents=True, exist_ok=True)
+    target = out_dir / "entry.png"
     shutil.copyfile(source, target)
     print(f"wrote {target} ({target.stat().st_size} bytes)")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
